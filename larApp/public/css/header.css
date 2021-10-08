@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  box-shadow: 2px 2px 26px #878787,
+    -2px -2px 26px #878787;
+  font-weight: 600;
+  /* background-color: #fff; */
+  min-height: 59px;
+  overflow: auto;
+  /* border-bottom: .1px solid grey; */
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  float: left;
+}
+
+.nav-mobile a {
+  display: block;
+  padding: 1rem 1.8rem;
+  margin: 0;
+
+  line-height: 40px;
+  color: #000;
+  text-decoration: none;
+  font-size: 15px;
+  text-transform: uppercase;
+
+  transition: all .2s ease-in;
+
+}
+
+.nav-mobile a:hover {
+  color: #878787;
+  /* background: #99ccff; */
+  /* border-bottom: 2px solid red; */
+}
+
+.toggle-nav {
+  display: none;
+  text-decoration: none;
+}
+
+@media only screen and (max-width:600px) {
+  .nav {
+    justify-content: space-between;
+    background: #fff;
+    padding: 5px 15px;
+  }
+
+  .toggle-nav {
+    display: block;
+    padding: 10px;
+    right: 10px;
+    line-height: 30px;
+    color: #000;
+    font-size: 20px;
+    float: left;
+
+  }
+
+  .nav-mobile {
+    display: none;
+    background: #f1f1f1;
+    top: 80px;
+    right: -10px;
+    position: absolute;
+    width: 55%;
+  }
+
+  .nav-mobile a {
+    display: block;
+    padding: 1rem 1rem;
+    margin: 0;
+
+    /* line-height: 40px; */
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    transition: all .2s ease-in;
+
+  }
+
+  .nav-mobile li {
+    display: block;
+    width: 100%;
+
+
+  }
+}
+
+@media only screen and (min-width :768px) {
+  .nav {
+    justify-content: space-evenly;
+  }
+
+  .nav-mobile {
+    display: block !important;
+  }
+}
